@@ -5,17 +5,19 @@
 typedef struct lista Lista;
 typedef struct fila Fila;
 
+// estrutura de uma celula da fila
 struct lista {
 	int info;
 	Lista *prox;
 };
 
+// estrutuca com ponteiros para o inicio e fim da fila
 struct fila {
 	Lista *ini;
 	Lista *fim;
 };
 
-/*Função cria uma fila.*/
+/*Funcao cria uma fila.*/
 Fila* fila_cria(void) {
 	Fila *f = (Fila*)malloc(sizeof(Fila));  //cria dinamicamente e coloca o endereco em f
 	
@@ -24,15 +26,16 @@ Fila* fila_cria(void) {
 		exit(1);
 	}
 	
-	f->ini = NULL;  //estrutura inicial
+	f->ini = NULL;  //estrutura/celula inicial da fila
 	
-	f->fim = NULL;
+	f->fim = NULL;  //estrutura/celula inicial da fila
 	
 	return f;
 }
 
 /*Função para inserir um elemento em uma fila.*/
 void fila_insere(Fila *f, int info) {
+	// celula de base
 	Lista *l = (Lista*)malloc(sizeof(Lista));
 	
 	if(l==NULL) {
