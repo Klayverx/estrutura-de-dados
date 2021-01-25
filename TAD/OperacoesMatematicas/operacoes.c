@@ -1,3 +1,4 @@
+// corpo das funcoes definidas no arquivo .h
 #include "operacoes.h"
 
 int Soma(int x, int y) {

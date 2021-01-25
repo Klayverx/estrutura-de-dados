@@ -1,5 +1,6 @@
-typedef struct aluno
-{
+#include <stdio.h>
+
+typedef struct aluno{
   char nome[81];
   float ira;
 } Aluno;
@@ -7,20 +8,18 @@ typedef struct aluno
 #define MAX 100
 #define SEMALUNO -1 // Valor qd aluno inexistente no vetor
 
-void inicializa(int n, Aluno alunos[])
-{
+void inicializa(int n, Aluno alunos[]){
   int i;
   for (i = 0; i < n; i++)
-    // Significa que não tem aluno, mas está existindo a estrutura
-    // Utiliza "." pq é a própria estrutura
+    // Significa que nao tem aluno, mas esta existindo a estrutura
+    // Utiliza "." pq eh a propria estrutura
     alunos[i].ira = SEMALUNO;
 };
 
-void atualiza(int n, Aluno alunos[], int i)
-{
+void atualiza(int n, Aluno alunos[], int i){
   float ira;
 
-  // verificando a posição do aluno repassada
+  // verificando a posicao do aluno repassada
   if (i < 0 || i >= n)
   {
     printf("Indice fora do limite do vetor!!!\n");
@@ -32,8 +31,7 @@ void atualiza(int n, Aluno alunos[], int i)
   // No caso, o \n
   scanf(" %[^\n]", alunos[i].nome);
 
-  while (1)
-  {
+  while (1){
     printf("Entre com o IRA do aluno\n");
     scanf(" %f", &ira);
 
@@ -45,26 +43,22 @@ void atualiza(int n, Aluno alunos[], int i)
 
   alunos[i].ira = ira;
 };
-void imprime(int n, Aluno alunos[], int i)
-{
+void imprime(int n, Aluno alunos[], int i){
   // verificando a posição do aluno repassada
-  if (i < 0 || i >= n)
-  {
+  if (i < 0 || i >= n){
     printf("Indice fora do limite do vetor!!!\n");
     exit(1);
   }
 
   // Verificando se o ira é != de -1
   // Se existe aluno
-  if (alunos[i].ira != SEMALUNO)
-  {
+  if (alunos[i].ira != SEMALUNO){
     printf("Nome: %s\n", alunos[i].nome);
     printf("Ira: %.2f\n", alunos[i].ira);
   }
 };
 
-void imprime_todos(int n, Aluno alunos[])
-{
+void imprime_todos(int n, Aluno alunos[]){
   int i;
   printf("Listagem de Alunos\n");
 
@@ -74,23 +68,28 @@ void imprime_todos(int n, Aluno alunos[])
 
 void exclui(int n, Aluno alunos[], int i);
 
-int main(void)
-{
+int main(void){
   Aluno *alunos;
   int n, i;
+  
   printf("Entre com o numero de alunos:\n");
   scanf("%d", &n);
+  
   alunos = (Aluno *)malloc(n * sizeof(Aluno));
-  if (alunos == NULL)
-  {
+  
+  if (alunos == NULL){
     printf("Memoria Insuficiente!!!\n");
     exit(1);
   }
+  
   inicializa(n, alunos);
+  
   for (i = 0; i < n; i++)
     atualiza(n, alunos, i);
 
   imprime_todos(n, alunos);
+  
   free(alunos);
+  
   return 0;
 }

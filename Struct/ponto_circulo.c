@@ -12,19 +12,19 @@ typedef struct circulo {
   float r;
 } Circulo;
 
-// ponto externo ou interno ao círculo
+// ponto externo ou interno ao circulo
 void capturaPonto(Ponto *pp){
   printf("Digite os valores de x e y do ponto:\n");
   scanf("%f %f", &pp->x, &pp->y);
 }
 
-// captura das coordenadas do ponto central e do raio do círculo
+// captura das coordenadas do ponto central e do raio do circulo
 void capturaCirculo(Circulo *pc){
   printf("Digite os valores de x, y e o raio:\n");
   scanf("%f %f %f", &pc->p.x, &pc->p.y, &pc->r);
 }
 
-// calcula a distância do ponto central do circulo e o ponto externo
+// calcula a distancia do ponto central do circulo e o ponto externo
 float distancia(Ponto *p1, Ponto *p2) {
   return sqrt ((p1->x - p2->x) * (p1->x - p2->x) + (p1->y - p2->y) * (p1->y - p2->y));
 }

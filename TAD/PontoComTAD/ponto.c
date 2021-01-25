@@ -7,16 +7,16 @@ struct ponto {
 	float x; float y;
 };
 
-Ponto* pto_cria(float x, float y){
+Ponto* pto_cria(float x, float y){  //retorna um ponteiro para uma estrutura Ponto
 	Ponto* p = (Ponto*)malloc(sizeof(Ponto));
-	
+
 	if(p==NULL){
 		printf("Memoria insuficiente\n");
 		exit(1); 
 	}
-		
-	p->x = x; p->y = y;
 	
+	p->x = x; p->y = y;
+
 	return p;
 }
 

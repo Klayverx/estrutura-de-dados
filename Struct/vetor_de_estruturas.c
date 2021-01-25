@@ -11,15 +11,15 @@ typedef struct aluno {
 void inicializa(int n, Aluno alunos[]){
   int i;
   for(i = 0; i < n; i++)
-  // Significa que não tem aluno, mas está existindo a estrutura
-  // Utiliza "." pq é a própria estrutura
+  // Significa que nao tem aluno, mas esta existindo a estrutura
+  // Utiliza "." pq eh a propria estrutura
     alunos[i].ira = SEMALUNO;
 };
 
 void atualiza(int n, Aluno alunos[], int i){
   float ira;
 
-  // verificando a posição do aluno repassada
+  // verificando a posicao do aluno repassada
   if(i<0 || i>=n){
     printf("Indice fora do limite do vetor!!!\n");
     exit(1);
@@ -45,13 +45,13 @@ void atualiza(int n, Aluno alunos[], int i){
 };
 
 void imprime(int n, Aluno alunos[], int i){
-  // verificando a posição do aluno repassada
+  // verificando a posicao do aluno repassada
   if(i < 0 || i >= n){
     printf("Indice fora do limite do vetor!!!\n");
     exit(1);
   }
 
-  // Verificando se o ira é != de -1
+  // Verificando se o ira eh != de -1
   // Se existe aluno
   if(alunos[i].ira != SEMALUNO){
     printf("Nome: %s\n",alunos[i].nome);
