@@ -1,24 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fila.h"
+#include "fila1.h" //executar também com "fila2.h"
 
-int main() {
+int main(void){
+	int a, qtd;
 	
-	//criando a estrutura inicial
-	Fila *f = fila_cria();
+	Fila* f1 = fila_cria();
 	
-	//inserindo elementos
-	fila_insere(f, 5);
-	fila_insere(f, 6);
-	fila_insere(f, 7);
-	fila_insere(f, 8);
-	fila_insere(f, 9);
+	fila_insere(f1, 10);
+	fila_insere(f1, 20);
+	fila_insere(f1, 30);
+	fila_insere(f1, 40);
+	fila_insere(f1, 50);
 	
-	fila_remove(f);
+	a = fila_remove(f1);
 	
-	fila_imprime(f);
+	printf("Valor removido da fila f1: %d\n", a);
 	
-	fila_libera(f);
+	/*fila_imprime(f1);
+	
+	Fila* f2 = inverte(f1);
+	
+	fila_imprime(f2);
+	
+	qtd = qtd_maior(f1, 20);
+	
+	printf("Núm. de elem. maiores que 20 em f1: %d\n", qtd);
+	printf("Qtd. elem. pares na fila f1: %d\n", pares(f1));
+	
+	fila_libera(f1);
+	fila_libera(f2);*/
+	
+	system("PAUSE");
 	
 	return 0;
 }

@@ -1,6 +1,6 @@
 [Project]
-FileName=FilaComLista.dev
-Name=FilaComLista
+FileName=ArvoreBinariaDeBusca.dev
+Name=ArvoreBinariaDeBusca
 Type=1
 Ver=2
 ObjFiles=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=4
+UnitCount=3
 
 [VersionInfo]
 Major=1
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=fila.c
+FileName=arvb.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -71,17 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=..\..\Trabalho01\quest03\fila1.h
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit4]
-FileName=fila2.h
+FileName=arvb.c
 CompileCpp=0
 Folder=
 Compile=1

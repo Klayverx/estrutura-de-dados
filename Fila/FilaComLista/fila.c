@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fila.h"
+#include "fila1.h"
+#include "fila2.h"
 
 typedef struct lista Lista;
 typedef struct fila Fila;
